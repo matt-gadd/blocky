@@ -12,28 +12,96 @@ body {
     padding: 0;
 }
 
-#grid {
-    width: 100%;
-    height: 100%;
-    background: grey;
+.game {
+	overflow: hidden;
+	padding: 8vmin;
+}
+
+.grid, .controls {
+	display: flex;
+	justify-content: center;
 }
 
 .col {
-    background: grey;
+    background: white;
     float:left;
-    width: 10%;
-    height: 100%;
+	width: 8vmin;
 }
-.block {
-    width: 100%;
-    height: 10%;
-    background: red;
+
+.block div {
+	box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+	border-radius: 5px;
     float: left;
     margin: 0;
     padding: 0;
     transition: all;
+	width: 8vmin;
+	height: 8vmin;
+	line-height: 8vmin;
+	text-align: center;
+	user-select: none;
+	cursor: default;
+	font-size: 5vmin;
 }
 
-.active {
-    -webkit-box-shadow: inset 0 0 10px #000000;
+.red {
+	background: red;
+}
+
+.green {
+	background: green;
+}
+
+.yellow {
+	background: yellow;
+}
+
+.blue {
+	background: blue;
+}
+
+.horizontalLine {
+	background: white;
+}
+
+.highlighted {
+	opacity: 0.2;
+}
+
+@keyframes fade {
+  0%   { opacity:1; }
+  50%  { opacity:0.5; }
+  100% { opacity:1; }
+}
+
+.highlighted {
+    animation: fade 1s infinite;
+}
+
+.block-enter {
+  transform: translateY(-600px);
+}
+
+.block-enter.block-enter-active {
+  transform: translateY(0px);
+  transition: all 0.3s ease-out;
+}
+
+button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	margin: 4px;
+	padding: 5px 12px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
