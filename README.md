@@ -11,13 +11,3 @@ To keep the reducers from being impure the majority of the work is done in actio
 The react components themselves are extremely simple functional components, the `Column` component does use `react-transition-group` which allows animating new blocks into view.
 
 
-## Given more time...
-
-* I did not TDD this exercise and I ran out of time (not excusable :D), so I do not have a full set of tests and the tests I do have are mostly happy paths.
-* Some of the overall naming/structure is a little scrappy due to time constraints
-* Use a seeded rng for predictability. Helpful in testing scenarios and future game functionality (like sharing levels)
-* Use an immutable library
-* Implement a score board
-
-
-
