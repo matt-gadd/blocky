@@ -1,6 +1,6 @@
 # README
 
-Here is my slightly scrappy task :). You can play it [here](https://matt-gadd.github.io/blocky)
+You can play it [here](https://matt-gadd.github.io/blocky)
 
 The `npm scripts` remain in functionality, so `build`, `start`, `test`, `test:watch`, `pretty` to do appropriate actions, the only difference being the `test` commands use `jest` instead.
 
